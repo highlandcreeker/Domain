@@ -9,17 +9,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FBPortal.Domain.Entities
 {
-    public class Invoice
+    public class Vendor
     {
-        public Guid InvoiceId { get; set; }
+        public int ID { get; set; }
+        [MaxLength(256)]
         public string Name { get; set; }
-        public string Vendor { get; set; }
-        public decimal AmountPaid { get; set; }
+        public string Description { get; set; }
+
         
         public DateTime DateAdded { get; set; }
 
-        public Guid ClientId { get; set; }
-        public virtual Client Client { get; set; }
+        public virtual List<Product> Products { get; set; }
 
     }
 }

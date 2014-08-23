@@ -21,5 +21,9 @@ namespace FBPortal.Domain.Concrete
         public DbSet<Period> Periods { get; set; }
         public DbSet<ClientPeriod> ClientPeriods { get; set; }
         public DbSet<Expense> Expenses { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Product> Products { get; set; }
+
+        public DbSet<Vendor> Vendors { get; set; }
     }
 }

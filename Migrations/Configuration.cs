@@ -68,6 +68,32 @@ namespace FBPortal.Domain.Migrations
                 }
             }
 
+
+            //Categories
+            if (context.Categories.Count() == 0)
+            {
+                context.Categories.Add(new Category() { ID = 1, Name = "Beef" });
+                context.Categories.Add(new Category() { ID = 2, Name = "Beverages" });
+                context.Categories.Add(new Category() { ID = 3, Name = "Dairy" });
+                context.Categories.Add(new Category() { ID = 4, Name = "OtherMeat" });
+                context.Categories.Add(new Category() { ID = 5, Name = "Pork" });
+                context.Categories.Add(new Category() { ID = 6, Name = "Poultry" });
+                context.Categories.Add(new Category() { ID = 7, Name = "Produce" });
+                context.Categories.Add(new Category() { ID = 8, Name = "Seafood" });
+
+                context.SaveChanges();
+
+            }
+
+            //Vendors
+            if (context.Vendors.Count() == 0)
+            {
+                context.Vendors.Add(new Vendor() { Name = "US Foods", Description = "All Foods", DateAdded = DateTime.UtcNow });
+                context.Vendors.Add(new Vendor() { Name = "Cysco", Description = "All Foods", DateAdded = DateTime.UtcNow });
+                
+                context.SaveChanges();
+            }
+
         }
 
     }
