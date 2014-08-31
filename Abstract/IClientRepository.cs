@@ -18,6 +18,5 @@ namespace FBPortal.Domain.Abstract
 
         Task<Invoice> CreateInvoice(Invoice clientInvoice);
 
-
     }
 }

@@ -20,6 +20,7 @@ namespace FBPortal.Domain.Entities
         public DateTime DateAdded { get; set; }
 
         public virtual List<Product> Products { get; set; }
+        public virtual List<PriceList> PriceLists { get; set; }
 
     }
 }

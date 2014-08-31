@@ -9,7 +9,7 @@ using FBPortal.Domain.Entities;
 
 namespace FBPortal.Domain.Concrete
 {
-    public class CategoryRepository : ICategory
+    public class CategoryRepository : ICategoryRepository
     {
         private ApplicationDbContext context = new ApplicationDbContext();
         public IQueryable<Category> Categories { get { return context.Categories.AsQueryable(); } }

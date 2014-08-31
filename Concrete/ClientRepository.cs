@@ -12,7 +12,7 @@ namespace FBPortal.Domain.Concrete
     {
         private ApplicationDbContext context = new ApplicationDbContext();
         public IQueryable<Client> Clients { get { return context.Clients.AsQueryable(); } }
-               
+
         public async Task<Client> Create(Client client)
         {
             client.ClientId = Guid.NewGuid();
@@ -46,6 +46,10 @@ namespace FBPortal.Domain.Concrete
 
             return clientInvoice;
         }
+
+
+
+        
 
     }
 }

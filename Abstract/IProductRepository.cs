@@ -12,7 +12,10 @@ namespace FBPortal.Domain.Abstract
     {
          IQueryable<Product> Products { get; }
 
-        Task<Product> Create(Product Product);
-        
+        Task<Product> Create(Product product);
+
+        Task<Product> Edit(Product product);
+
+        Task<Product> Delete(Product product);
     }
 }

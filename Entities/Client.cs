@@ -17,6 +17,8 @@ namespace FBPortal.Domain.Entities
         public decimal Balance { get; set; }
 
         public virtual List<Invoice> Invoices { get; set; }
+
+        public virtual List<PriceList> PriceLists { get; set; }
         public List<ClientPeriod> ClientPeriods { get; set; }
 
         public Client() { this.Invoices = new List<Invoice>(); }

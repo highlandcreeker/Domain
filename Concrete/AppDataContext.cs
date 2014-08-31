@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FBPortal.Domain.Entities;
 using System.Data.Entity;
 using Microsoft.AspNet.Identity.EntityFramework;
+
+using FBPortal.Domain.Entities;
 
 namespace FBPortal.Domain.Concrete
 {
@@ -23,7 +24,8 @@ namespace FBPortal.Domain.Concrete
         public DbSet<Expense> Expenses { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
-
         public DbSet<Vendor> Vendors { get; set; }
+        public DbSet<PriceList> PriceLists { get; set; }
+        public DbSet<PriceListData> PriceListData { get; set; }
     }
 }

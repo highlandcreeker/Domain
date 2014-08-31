@@ -8,8 +8,8 @@ using FBPortal.Domain.Entities;
 
 namespace FBPortal.Domain.Abstract
 {
-    public interface ICategory
+    public interface IPriceListDataRepository
     {
-        IQueryable<Category> Categories { get; }
+        IQueryable<PriceListData> PriceListData { get; }
     }
 }

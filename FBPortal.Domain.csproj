@@ -54,14 +54,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\ICategory.cs" />
+    <Compile Include="Abstract\ICategoryRepository.cs" />
     <Compile Include="Abstract\IClientRepository.cs" />
     <Compile Include="Abstract\IInvoiceRepository.cs" />
+    <Compile Include="Abstract\IPriceListDataRepository.cs" />
+    <Compile Include="Abstract\IPriceListRepository.cs" />
     <Compile Include="Abstract\IProductRepository.cs" />
     <Compile Include="Abstract\IVendorRepository.cs" />
     <Compile Include="Concrete\CategoryRepository.cs" />
     <Compile Include="Concrete\ClientRepository.cs" />
     <Compile Include="Concrete\InvoiceRepository.cs" />
+    <Compile Include="Concrete\PriceListDataRepository.cs" />
+    <Compile Include="Concrete\PriceListRepository.cs" />
     <Compile Include="Concrete\ProductRepository.cs" />
     <Compile Include="Concrete\VendorRepository.cs" />
     <Compile Include="Entities\Category.cs" />
@@ -73,6 +77,8 @@
     <Compile Include="Concrete\AppDataContext.cs" />
     <Compile Include="Entities\ClientPeriod.cs" />
     <Compile Include="Entities\Period.cs" />
+    <Compile Include="Entities\PriceList.cs" />
+    <Compile Include="Entities\PriceListData.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Vendor.cs" />
     <Compile Include="Migrations\201402270233565_Base.cs" />
@@ -86,6 +92,10 @@
     <Compile Include="Migrations\201408231816048_Add_Tables_Vendors_Products_Categories.cs" />
     <Compile Include="Migrations\201408231816048_Add_Tables_Vendors_Products_Categories.Designer.cs">
       <DependentUpon>201408231816048_Add_Tables_Vendors_Products_Categories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408301757543_PriceLists.cs" />
+    <Compile Include="Migrations\201408301757543_PriceLists.Designer.cs">
+      <DependentUpon>201408301757543_PriceLists.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201408231816048_Add_Tables_Vendors_Products_Categories.resx">
       <DependentUpon>201408231816048_Add_Tables_Vendors_Products_Categories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408301757543_PriceLists.resx">
+      <DependentUpon>201408301757543_PriceLists.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
